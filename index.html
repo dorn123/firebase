@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  ul{
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  span{
+    display: block;
+  }
+</style>
+</head>
+<body>
+    <div class="container">
+      <h1>สมัคร</h1>
+      
+        <form id="addUser">
+          <input type="text" name="name" placeholder="Add name">
+          <input type="text" name="surname" placeholder="Add surname">
+          <input type="text" name="city" placeholder="Add city">
+          <button>Add</button>
+        </form>
+        <ul id="userList"></ul>
+      </ul>
+    </div>
+  
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfrKtE98cNYSIpw8ojWwReSbq2TRYA0rI",
+    authDomain: "myfirebase-6e87e.firebaseapp.com",
+    projectId: "myfirebase-6e87e",
+    storageBucket: "myfirebase-6e87e.appspot.com",
+    messagingSenderId: "326736789091",
+    appId: "1:326736789091:web:c80607d534beeaa83b0256",
+    measurementId: "G-ND7814FPK9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+const db = firebase.firestore();
+
+
+</script>
+<script src="index.js">
+
+</script>
+</body>
+</html>
