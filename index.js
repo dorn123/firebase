@@ -22,15 +22,35 @@ db.collection('users').get().then(user =>{
     user.docs.forEach(doc => {
         console.log(doc.data());
         renderUser(doc);
+        
     })
 });
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
+    setInterval(()=>{location.reload();}, 1000);
     db.collection('users').add({
         name: form.name.value,
         surname: form.surname.value,
         city: form.city.value
+        
     })
 
 })
+
+// db.collection('users').orderBy('surname').onSnapshot(user =>{
+//     user.docs.forEach(doc => {
+//         console.log(doc.data());
+//         renderUser(doc);
+//     })
+// });
+
+
+// db.collection('users').orderBy('name').onSnapshot(snapshot =>{
+//     let changes = snapshot.docChanges();
+//     changes.forEach(change =>{
+//                 console.log(doc.data());
+//         renderUser(doc);
+//     })
+    
+// });
